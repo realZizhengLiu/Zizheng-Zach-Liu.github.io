@@ -107,9 +107,9 @@ courses:
 - `title`：完整英文标题。
 - `authors`：按正确顺序填写作者；本人加粗由 `_data/authors.yml` 控制。
 - `status`：例如 `Conditionally accepted`、`Major revision`、`Under review` 或 `Working paper`。
-- `venue`：期刊名；未确定投稿期刊的工作论文留空。
-- `abstract`：列表中直接展示的短介绍。
-- 第二个 `---` 后的正文：点击展开后阅读的长介绍。
+- `venue`：期刊名，可留空；留空时只显示 `status`，不会显示期刊名或多余分隔符。
+- `abstract`：列表中直接展示的短介绍，可写成 `abstract: ""`；留空时不显示简介段落。
+- 第二个 `---` 后的正文：点击展开后阅读的长介绍，可留空；留空时不显示 **Read abstract** 按钮。
 - `order`：整数，较小的数排在同组前面；修改顺序无需伪造日期。
 - `group`：`job_market`、`journal` 或 `working`，决定 Research 页所在分组。
 - `selected`：是否出现在首页精选。
@@ -120,10 +120,12 @@ courses:
 
 ```yaml
 status: "Under review"
-venue: "Management Science"
+venue: ""
 ```
 
 改为新收到通知中的准确措辞。不要把条件接收和正式接收混写，也不要因为已经参会而给工作论文补上期刊发表日期。
+
+当前 **Learning While Earning** 保留 `Under review`，期刊名留空。两篇 Working Papers 当前均不显示简介和展开摘要；如继续保持这种展示方式，可以移除 `abstract` 字段或写成 `abstract: ""`，并让第二个 `---` 后没有正文。标题、作者、状态和研究方向仍会正常展示。
 
 ### 新增一篇论文：完整格式示例
 

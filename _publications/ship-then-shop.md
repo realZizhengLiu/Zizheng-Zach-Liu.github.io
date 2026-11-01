@@ -3,7 +3,7 @@ paper_id: ship-then-shop
 title: "Learning While Earning: Algorithmic Learning and Pricing Strategies in Ship-Then-Shop Retailing"
 order: 4
 status: "Under review"
-venue: "Management Science"
+venue: ""
 area: "AI-Enabled Retailing"
 group: journal
 selected: true

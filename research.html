@@ -12,4 +12,3 @@ description: "Research on digital advertising, the creator economy, and AI-enabl
   <section class="paper-group" aria-labelledby="journal-heading"><div class="group-heading"><span class="section-index">02</span><h2 id="journal-heading">Journal manuscripts</h2></div>{% assign journal = papers | where: 'group', 'journal' %}{% for paper in journal %}{% include paper.html paper=paper expanded=true %}{% endfor %}</section>
   <section class="paper-group" aria-labelledby="working-heading"><div class="group-heading"><span class="section-index">03</span><h2 id="working-heading">Working papers</h2></div>{% assign working = papers | where: 'group', 'working' %}{% for paper in working %}{% include paper.html paper=paper expanded=true %}{% endfor %}</section>
 </div>
-<section class="future-section section-block"><p class="eyebrow">Looking ahead</p><h2>Future research.</h2><div class="prose">{{ site.data.research.future | markdownify }}</div></section>
