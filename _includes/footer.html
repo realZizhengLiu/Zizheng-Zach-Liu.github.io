@@ -1,0 +1,6 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div><a class="footer-name" href="{{ '/' | relative_url }}">{{ site.data.profile.primary_name }}</a><p>{{ site.data.display.footer_text }}</p></div>
+    <div class="footer-meta"><a href="mailto:{{ site.data.profile.email | encode_email }}">Get in touch {% include arrow.html %}</a><span>© {{ site.time | date: '%Y' }} {{ site.data.profile.short_name }} · <a href="https://github.com/luost26/academic-homepage" target="_blank" rel="noopener noreferrer">Template</a></span></div>
+  </div>
+</footer>

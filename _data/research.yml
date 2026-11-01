@@ -1,0 +1,15 @@
+intro: |-
+  I study how technologies reshape firms’ incentives and strategic decisions in digital markets. Across three connected research streams, I examine the implications for competition, profitability, and consumer welfare.
+methods: "Game-theoretic modeling · Information design · Mechanism design"
+areas:
+  - id: advertising
+    name: "Digital Advertising"
+    description: "Advertising measurement, ad blocking, and the evaluative role of LLM platforms."
+  - id: creators
+    name: "Creator Economy"
+    description: "Fan loyalty, content creation, and the design of creator–consumer relationships."
+  - id: retailing
+    name: "AI-Enabled Retailing"
+    description: "Algorithmic learning, personalized product advice, and retail pricing strategies."
+future: |-
+  My future work examines the design and governance of advertising markets, including markets mediated by AI agents, and how advances in AI change retail business models. I am particularly interested in when firms’ commercial incentives align with consumers’ interests.

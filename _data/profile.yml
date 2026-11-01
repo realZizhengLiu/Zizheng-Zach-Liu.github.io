@@ -1,0 +1,51 @@
+primary_name: "Zizheng (Zach) Liu"
+short_name: "Zizheng Liu"
+navbar_name: "Zizheng Liu"
+tagline: "The economics of digital platforms and technology."
+positions:
+  - name: "Ph.D. Candidate in Management Science and Engineering"
+  - name: "School of Economics and Management"
+  - name: "Tsinghua University"
+email: "liu-zz20@mails.tsinghua.edu.cn"
+location: "Beijing, China"
+advisor: "Professor Dengpan Liu"
+portrait_url: "/assets/images/photos/portrait.png"
+portrait_alt: "Portrait of Zizheng Liu"
+cv_link: ""
+short_bio: |-
+  I am a Ph.D. candidate in Management Science and Engineering at the School of Economics and Management, Tsinghua University, advised by Professor Dengpan Liu.
+
+  My research studies the **economics of digital platforms**, with a focus on digital advertising, the creator economy, and AI-enabled retailing. Using game-theoretic modeling, information design, and mechanism design, I examine how technological capabilities shape firms’ incentives, pricing, and information provision, and how their decisions affect competition and consumer welfare. My current projects investigate advertising attribution, built-in ad blockers, advertising assessments on LLM platforms, fan loyalty, algorithmic learning in retailing, and AI shopping assistants.
+social_links: []
+education:
+  - name: "Tsinghua University"
+    position: "Ph.D. Candidate in Management Science and Engineering"
+    date: "September 2020 – Expected 2027"
+    detail: "School of Economics and Management · Advisor: Professor Dengpan Liu"
+  - name: "Tianjin University"
+    position: "Bachelor of Management"
+    date: "September 2016 – June 2020"
+awards:
+  - name: "Chiang Chen Scholarship, Tsinghua University"
+    date: "2025"
+  - name: "Third Place, INFORMS Social Media Analytics Best Student Paper Award"
+    date: "2024"
+  - name: "National Scholarship for Graduate Students"
+    date: "2024"
+  - name: "Comprehensive Scholarship for Doctoral Students, Tsinghua University"
+    date: "2021–2023"
+  - name: "WISE Best Student Paper Award, Runner-Up"
+    date: "2022"
+  - name: "Outstanding Graduate, Tianjin University"
+    date: "2020"
+  - name: "Tianjin University Outstanding Student Model Award"
+    date: "2018"
+  - name: "National First Prize, Chinese Mathematics Competitions for College Students (Non-Mathematics Category)"
+    date: "2018"
+  - name: "National Scholarship for Undergraduate Students"
+    date: "2018"
+methods:
+  - "Game theory, information design, and mechanism design"
+  - "Mathematical optimization and causal inference"
+computing: "Lean, Python, R, MATLAB, and ArcGIS"
+languages: "English (fluent); Mandarin Chinese (native)"

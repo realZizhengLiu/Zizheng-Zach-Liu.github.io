@@ -1,0 +1,9 @@
+{%- comment -%}Adapted from luost26/academic-homepage (MIT).{%- endcomment -%}
+{%- for key in include.authors -%}
+  {%- assign info = site.data.authors[key] -%}
+  {%- assign name = info.name | default: key -%}
+  {%- if info.url and info.url != '' -%}<a href="{{ info.url | escape }}" target="_blank" rel="noopener noreferrer">{%- endif -%}
+  {%- if info.bold -%}<strong>{{ name | escape }}</strong>{%- else -%}{{ name | escape }}{%- endif -%}
+  {%- if info.url and info.url != '' -%}</a>{%- endif -%}
+  {%- unless forloop.last -%}, {% endunless -%}
+{%- endfor -%}

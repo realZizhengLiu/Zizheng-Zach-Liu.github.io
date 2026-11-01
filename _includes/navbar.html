@@ -1,0 +1,9 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.data.profile.navbar_name | escape }} home"><span class="brand-mark" aria-hidden="true">ZL<span>.</span></span><span>{{ site.data.profile.navbar_name }}</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation"><span class="nav-toggle-label">Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
+    <nav id="main-navigation" class="main-navigation" aria-label="Main navigation">
+      {% for item in site.data.navigation.pages %}<a href="{{ item.url | relative_url }}"{% if item.name == page.navbar_title %} class="active" aria-current="page"{% endif %}>{{ item.name }}</a>{% endfor %}
+    </nav>
+  </div>
+</header>

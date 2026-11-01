@@ -1,0 +1,14 @@
+{% assign paper = include.paper %}
+<article class="paper{% if paper.group == 'job_market' %} paper-featured{% endif %}" data-area="{{ paper.area | escape }}" id="{{ paper.paper_id }}">
+  <div class="paper-topline"><span class="paper-area">{{ paper.area }}</span>{% if paper.group == 'job_market' %}<span class="badge">Job Market Paper</span>{% endif %}</div>
+  <h3>{{ paper.title | escape }}</h3>
+  <p class="paper-authors">{% include widgets/author_list.html authors=paper.authors %}</p>
+  <p class="paper-status"><span{% if paper.status == 'Conditionally accepted' %} class="status-positive"{% endif %}>{{ paper.status }}</span>{% if paper.venue != '' %}<span class="status-divider" aria-hidden="true">·</span><em>{{ paper.venue }}</em>{% endif %}</p>
+  <p class="paper-abstract">{{ paper.abstract | escape }}</p>
+  {% if paper.award %}<p class="paper-note"><svg viewBox="0 0 20 20" aria-hidden="true" fill="none"><path d="m10 2 2.3 4.6 5.1.7-3.7 3.6.9 5.1-4.6-2.4L5.4 16l.9-5.1L2.6 7.3l5.1-.7L10 2Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>{{ paper.award }}</p>{% endif %}
+  {% if paper.conference %}<p class="paper-note">{{ paper.conference }}</p>{% endif %}
+  <div class="paper-actions">
+    {% for link in paper.links %}{% assign link_start = link[1] | slice: 0, 1 %}<a class="text-link" href="{% if link_start == '/' %}{{ link[1] | relative_url }}{% else %}{{ link[1] | escape }}{% endif %}"{% if link_start != '/' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ link[0] | escape }} {% include arrow.html %}</a>{% endfor %}
+    {% if include.expanded %}<details class="paper-details"><summary><span class="when-closed">Read abstract</span><span class="when-open">Close abstract</span><span aria-hidden="true">+</span></summary><div class="full-abstract">{{ paper.content | markdownify }}</div></details>{% endif %}
+  </div>
+</article>
