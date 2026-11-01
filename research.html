@@ -1,0 +1,15 @@
+---
+title: "Research"
+navbar_title: Research
+permalink: /research/
+description: "Research on digital advertising, the creator economy, and AI-enabled retailing by Zizheng Liu."
+---
+<header class="page-heading"><p class="eyebrow">Research</p><h1>Technology, incentives,<br> and digital markets<span class="title-dot">.</span></h1><div class="page-intro prose">{{ site.data.research.intro | markdownify }}</div><p class="methods-line">{{ site.data.research.methods }}</p></header>
+{% assign papers = site.publications | where: 'visible', true | sort: 'order' %}
+<div class="research-controls" data-research-controls hidden><div class="filter-buttons" role="group" aria-label="Filter research by topic"><button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All research <span>{{ papers.size }}</span></button>{% for area in site.data.research.areas %}<button class="filter-button" type="button" data-filter="{{ area.name | escape }}" aria-pressed="false">{{ area.name }}</button>{% endfor %}</div><span class="result-count" aria-live="polite" data-result-count>{{ papers.size }} papers</span></div>
+<div data-research-list>
+  <section class="paper-group" aria-labelledby="jmp-heading"><div class="group-heading"><span class="section-index">01</span><h2 id="jmp-heading">Job Market Paper</h2></div>{% assign jmp = papers | where: 'group', 'job_market' %}{% for paper in jmp %}{% include paper.html paper=paper expanded=true %}{% endfor %}</section>
+  <section class="paper-group" aria-labelledby="journal-heading"><div class="group-heading"><span class="section-index">02</span><h2 id="journal-heading">Journal manuscripts</h2></div>{% assign journal = papers | where: 'group', 'journal' %}{% for paper in journal %}{% include paper.html paper=paper expanded=true %}{% endfor %}</section>
+  <section class="paper-group" aria-labelledby="working-heading"><div class="group-heading"><span class="section-index">03</span><h2 id="working-heading">Working papers</h2></div>{% assign working = papers | where: 'group', 'working' %}{% for paper in working %}{% include paper.html paper=paper expanded=true %}{% endfor %}</section>
+</div>
+<section class="future-section section-block"><p class="eyebrow">Looking ahead</p><h2>Future research.</h2><div class="prose">{{ site.data.research.future | markdownify }}</div></section>

@@ -1,0 +1,14 @@
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+.bundle/
+vendor/
+*.log
+*.aux
+*.out
+*.synctex.gz
+.DS_Store
+Thumbs.db
+assets/files/zizheng-liu-cv.pdf
+tools/cv/

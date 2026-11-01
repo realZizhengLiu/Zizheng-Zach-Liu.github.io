@@ -1,0 +1,17 @@
+---
+title: "Curriculum Vitae"
+navbar_title: CV
+permalink: /cv/
+description: "Education, research, teaching, honors, and professional service of Zizheng (Zach) Liu."
+---
+{% assign profile = site.data.profile %}
+<header class="page-heading cv-heading"><div><p class="eyebrow">Curriculum vitae</p><h1>An academic overview<span class="title-dot">.</span></h1><p class="page-intro">{{ profile.primary_name }}<br>{{ profile.positions[0].name }}<br>{{ profile.positions[2].name }}</p></div></header>
+<div class="cv-layout"><nav class="cv-nav" aria-label="CV sections"><a href="#education">Education</a><a href="#research">Research</a><a href="#teaching">Teaching</a><a href="#awards">Honors &amp; awards</a><a href="#service">Service</a><a href="#methods">Methods &amp; skills</a></nav>
+<div class="cv-content">
+<section class="cv-section" id="education"><h2>Education</h2>{% for edu in profile.education %}<div class="cv-entry"><span class="cv-date">{{ edu.date }}</span><h3>{{ edu.name }}</h3><p>{{ edu.position }}</p>{% if edu.detail %}<p class="small muted">{{ edu.detail }}</p>{% endif %}</div>{% endfor %}</section>
+<section class="cv-section" id="research"><h2>Research</h2><p class="cv-research-intro">Digital advertising · Creator economy · AI-enabled retailing</p>{% assign papers = site.publications | where: 'visible', true | sort: 'order' %}{% for paper in papers %}<div class="cv-entry cv-paper"><h3><a href="{{ '/research/' | relative_url }}#{{ paper.paper_id }}">{{ paper.title | escape }}</a></h3><p class="paper-authors">{% include widgets/author_list.html authors=paper.authors %}</p><p class="small">{% if paper.group == 'job_market' %}<strong>Job Market Paper.</strong> {% endif %}{{ paper.status }}{% if paper.venue != '' %}, <em>{{ paper.venue }}</em>{% endif %}.</p></div>{% endfor %}</section>
+<section class="cv-section" id="teaching"><h2>Teaching</h2><p><strong>{{ site.data.teaching.role }}</strong> · {{ site.data.teaching.institution }} · {{ site.data.teaching.period }}</p>{% for course in site.data.teaching.courses %}<div class="cv-entry"><span class="cv-date">{{ course.terms }}</span><h3>{{ course.name }}</h3>{% if course.audience != '' or course.language != '' %}<p class="small muted">{{ course.audience }}{% if course.audience != '' and course.language != '' %} · {% endif %}{{ course.language }}</p>{% endif %}</div>{% endfor %}</section>
+<section class="cv-section" id="awards"><h2>Honors &amp; awards</h2>{% for award in profile.awards %}<div class="award-row"><span>{{ award.date }}</span><p>{{ award.name }}</p></div>{% endfor %}</section>
+<section class="cv-section" id="service"><h2>Professional service</h2>{% for item in site.data.teaching.service %}<div class="cv-entry"><h3>{{ item.role }}</h3><p>{{ item.venues }}</p></div>{% endfor %}</section>
+<section class="cv-section" id="methods"><h2>Methods &amp; skills</h2><div class="cv-entry"><h3>Research methods</h3>{% for method in profile.methods %}<p>{{ method }}</p>{% endfor %}</div><div class="cv-entry"><h3>Research computing</h3><p>{{ profile.computing }}</p></div><div class="cv-entry"><h3>Languages</h3><p>{{ profile.languages }}</p></div></section>
+</div></div>

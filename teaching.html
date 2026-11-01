@@ -1,0 +1,11 @@
+---
+title: "Teaching & Service"
+navbar_title: Teaching
+permalink: /teaching/
+description: "Teaching assistant experience and academic service by Zizheng Liu at Tsinghua University."
+---
+<header class="page-heading"><p class="eyebrow">Teaching &amp; service</p><h1>Supporting learning.<br> Contributing to the field<span class="title-dot">.</span></h1><p class="page-intro">{{ site.data.teaching.intro }}</p></header>
+<section class="teaching-section"><div class="group-heading"><span class="section-index">01</span><h2>Teaching experience</h2></div><div class="role-line"><strong>{{ site.data.teaching.role }} <span>· {{ site.data.teaching.institution }}</span></strong><span>{{ site.data.teaching.period }}</span></div>
+  <div class="courses">{% for course in site.data.teaching.courses %}<article class="course"><div><h3>{{ course.name }}</h3><p>{% if course.audience != '' %}{{ course.audience }}{% endif %}{% if course.audience != '' and course.language != '' %} · {% endif %}{{ course.language }}</p></div><span>{{ course.terms }}</span></article>{% endfor %}</div>
+</section>
+<section class="section-block service-section"><div class="group-heading"><span class="section-index">02</span><h2>Professional service</h2></div><div class="service-list">{% for item in site.data.teaching.service %}<div class="service-row"><h3>{{ item.role }}</h3><p>{{ item.venues }}</p></div>{% endfor %}</div></section>

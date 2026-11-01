@@ -1,0 +1,36 @@
+title: "Zizheng (Zach) Liu"
+description: "Ph.D. candidate at Tsinghua University studying the economics of digital platforms, digital advertising, the creator economy, and AI-enabled retailing."
+lang: en
+url: "https://realzizhengliu.github.io"
+baseurl: "/Zizheng-Zach-Liu.github.io"
+timezone: Asia/Shanghai
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+plugins:
+  - jekyll-email-protect
+collections:
+  publications:
+    output: false
+  news:
+    output: false
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+exclude:
+  - README.md
+  - MAINTENANCE.zh-CN.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - tools
+  - scripts
+  - .bundle
+  - .jekyll-cache
+  - .sass-cache
+  - .gitignore
+  - assets/files/zizheng-liu-cv.pdf
